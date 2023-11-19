@@ -39,15 +39,15 @@ const VideoDetail = () => {
     return <Loading />;
   return (
     <div className="w-full dark:bg-black dark:text-white">
-      <div className="flex flex-col lg:flex-row md:w-[85vw] xl:max-w-[90vw]  md:mx-auto dark:bg-black dark:text-white">
+      <div className="flex flex-col lg:flex-row md:w-[85vw] xl:w-[90vw] xl:max-w-[90vw]  md:mx-auto dark:bg-black dark:text-white">
         <div className=" mt-20 mx-auto md:mr-4 flex flex-col w-full">
-          <div className="flex">
+          <div className="flex h-[30vh] sm:h-[40vh]  md:h-[70vh] lg:h-[60vh] xl:h-[75vh] 2xl:h-[80vh] lg:w-[55vw] xl:w-[65vw] 2xl:w-[70vw] ">
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
-              className="react-player"
+              className="react-player "
               controls={true}
-              width="700px"
-              height="400px"
+              width="100%"
+              height="100%"
             />
           </div>
           <div className="text-lg font-bold pt-2 mx-2 md:mx-0">
@@ -110,7 +110,7 @@ const VideoDetail = () => {
             <CommentsVideo comment={comment} />
           </div>
         </div>
-        <div className=" ml-2 lg:mt-16 flex  w-full">
+        <div className="  lg:mt-16 flex  w-full">
           <VideosRelated videos={videos} />
         </div>
       </div>
