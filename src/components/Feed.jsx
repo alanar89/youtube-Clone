@@ -16,8 +16,8 @@ const Feed = () => {
   return (
     <div className="dark:bg-black dark:text-white">
       <SideBar selected={selectedCategory} setCategory={setSelectedCategory} />
-      <div className="flex md:justify-end ">
-        <div className=" mt-32 mx-4 md:mx-2">
+      <div className="flex lg:ml-[260px]">
+        <div className=" mt-32 mx-4 lg:mx-2  w-full">
           <Videos videos={videos} />
         </div>
       </div>

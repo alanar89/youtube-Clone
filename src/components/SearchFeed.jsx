@@ -16,12 +16,10 @@ const SearchFeed = () => {
 
   if (videos == "") return <Loading />;
   return (
-    <div className="dark:bg-black dark:text-white w-full">
-      <div className="flex flex-col mx-4 md:mx-auto md:w-[90vw]">
-        <div className="flex md:justify-end ">
-          <div className=" mt-32 mx-4 md:mx-2">
-            <Videos videos={videos} display={true} />
-          </div>
+    <div className="dark:bg-black dark:text-white">
+      <div className="flex">
+        <div className=" mt-32 mx-4 lg:mx-2 w-full">
+          <Videos videos={videos} />
         </div>
       </div>
     </div>

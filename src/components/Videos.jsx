@@ -1,26 +1,20 @@
 import { Link } from "react-router-dom";
 
-const Videos = ({ videos, display }) => {
+const Videos = ({ videos }) => {
   return (
-    <div className={`${!display ? "md:w-[75vw] lg:w-[80vw]" : ""}`}>
-      <div
-        className={`${
-          !display
-            ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-4 w-full gap-4"
-            : "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 w-full gap-4"
-        }`}
-      >
+    <div>
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))]  w-full gap-4">
         {videos &&
           videos.map((item, index) => (
             <div
-              className="rounded-lg pb-2 shadow-sm shadow-indigo-100 dark:shadow-black"
+              className="rounded-lg pb-2 shadow-sm shadow-indigo-100 dark:shadow-black w-full"
               key={index}
             >
               <Link to={`/video/${item.id.videoId}`} className="">
                 <img
                   alt={item.snippet.title}
                   src={item.snippet.thumbnails.high.url}
-                  className="h-56 w-full rounded-md object-cover"
+                  className="h-48 w-full rounded-xl object-cover"
                 />
                 <div className="font-bold mt-2">{item.snippet.title}</div>
               </Link>
